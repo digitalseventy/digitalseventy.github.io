@@ -8,6 +8,8 @@
             color: white;
             font-family: Arial, sans-serif;
             overflow: hidden; /* Hide scrollbars */
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -17,10 +19,12 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            padding: 20px;
         }
 
         h1 {
             text-align: center;
+            margin: 20px 0;
         }
 
         p {
@@ -29,6 +33,24 @@
 
         .logo {
             width: 150px; /* Adjust the size of the logo as needed */
+            max-width: 100%;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .logo {
+                width: 120px;
+            }
         }
     </style>
 </head>
