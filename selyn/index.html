@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Not Available in Your Country</title>
+	<link rel="icon" type="image/png" sizes="192x192" href="icon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="icon/android-chrome-512x512.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+	<link rel="shortcut icon" href="icon/favicon.ico">
+	<link rel="manifest" href="icon/site.webmanifest">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Digital Seventy - Innovative software solutions for streamlined business operations and increased efficiency. We provide high-quality SaaS services to help clients achieve their goals through technology.">
+	<meta name="keywords" content="Digital Seventy, software solutions, innovative, streamline, operations, efficiency, SaaS, technology">
+	<meta name="author" content="DIGITAL SEVENTY">
+	<meta name="robots" content="index, follow">
+	<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet"/>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide scrollbars */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .logo {
+            width: 150px; /* Adjust the size of the logo as needed */
+            max-width: 100%;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="logo.svg" alt="Logo">
+        <h1>Website Not Available</h1>
+        <p>We're sorry, but this website is not available in your country.</p>
+        <p>Based on your IP address, it appears that you are trying to access this site from a country where it is not supported.</p>
+        <p>If you believe this is an error or have any questions, please contact our support team.</p>
+        <div class="social-icons">
+			
+            <a href="https://web.facebook.com/digitalseventy/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/digitalseventy/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+	    <a href="https://twitter.com/digitalseventy" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/digitalseventy" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>            
+	    <a href="https://www.linkedin.com/company/deventy/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+                <p>&copy; All Rights Reserved <span id="currentYear"></span>, DIGITAL SEVENTY</p>
+	</div>
+		<script>
+			var year = new Date().getFullYear();
+			document.getElementById("currentYear").textContent = year;
+		</script>
+    </div>
+</body>
+</html>
