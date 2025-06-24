@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYLEN - Modern Workspaces & Business Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .bg-sylen-orange {
+            background-color: #FFA500;
+        }
+        
+        .text-sylen-orange {
+            color: #FFA500;
+        }
+        
+        .bg-sylen-green {
+            background-color: #228B22;
+        }
+        
+        .text-sylen-green {
+            color: #228B22;
+        }
+        
+        .border-sylen-orange {
+            border-color: #FFA500;
+        }
+        
+        .border-sylen-green {
+            border-color: #228B22;
+        }
+        
+        .hover\:bg-sylen-orange:hover {
+            background-color: #FFA500;
+        }
+        
+        .hover\:bg-sylen-green:hover {
+            background-color: #228B22;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,165,0,0.1) 0%, rgba(34,139,34,0.1) 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-sylen-orange">SYLEN</div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none" id="menu-toggle">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-sylen-orange">Home</a>
+                    <a href="#services" class="text-gray-800 hover:text-sylen-orange">Services</a>
+                    <a href="#about" class="text-gray-800 hover:text-sylen-orange">About</a>
+                    <a href="#contact" class="text-gray-800 hover:text-sylen-orange">Contact</a>
+                    <a href="#contact" class="bg-sylen-orange text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-sylen-orange">Home</a>
+                <a href="#services" class="block py-2 text-gray-800 hover:text-sylen-orange">Services</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-sylen-orange">About</a>
+                <a href="#contact" class="block py-2 text-gray-800 hover:text-sylen-orange">Contact</a>
+                <a href="#contact" class="block bg-sylen-orange text-white px-4 py-2 rounded-md mt-2 hover:bg-opacity-90 transition">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">Welcome to <span class="text-sylen-orange">SYLEN</span></h1>
+                    <p class="text-lg text-gray-600 mb-8">Your complete solution for modern workspaces and business growth. We provide the infrastructure, tools, and community to help your business thrive.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services" class="bg-sylen-orange text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition">Explore Our Spaces</a>
+                        <a href="#contact" class="border border-sylen-green text-sylen-green px-6 py-3 rounded-md hover:bg-sylen-green hover:text-white transition">Launch Your Business</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Workspace" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our <span class="text-sylen-green">Services</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">SYLEN offers comprehensive solutions to support businesses at every stage of their journey.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Coworking Center -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md border-t-4 border-sylen-orange">
+                    <div class="text-sylen-orange text-4xl mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Coworking Center</h3>
+                    <p class="text-gray-600 mb-6">A professional, flexible workspace for freelancers, startups, and remote teams. Enjoy shared offices, meeting rooms, and valuable networking opportunities.</p>
+                    <a href="#" class="text-sylen-orange font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <!-- Business Center -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md border-t-4 border-sylen-green">
+                    <div class="text-sylen-green text-4xl mb-6">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Business Center</h3>
+                    <p class="text-gray-600 mb-6">A hub for entrepreneurs and growing companies, offering virtual offices, business registration, administrative services, and private offices.</p>
+                    <a href="#" class="text-sylen-green font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <!-- SYLEN Platform -->
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md border-t-4 border-sylen-orange">
+                    <div class="text-sylen-orange text-4xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">SYLEN Platform</h3>
+                    <p class="text-gray-600 mb-6">A powerful digital platform to build, manage, and grow your company—from idea to full-scale operations. Includes planning, HR, finance, and analytics tools.</p>
+                    <a href="#" class="text-sylen-orange font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-sylen-orange mb-2">500+</div>
+                    <div class="text-gray-600">Members</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-sylen-green mb-2">120+</div>
+                    <div class="text-gray-600">Companies</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-sylen-orange mb-2">50+</div>
+                    <div class="text-gray-600">Events</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-sylen-green mb-2">24/7</div>
+                    <div class="text-gray-600">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Our Team" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About <span class="text-sylen-green">SYLEN</span></h2>
+                    <p class="text-gray-600 mb-6">SYLEN was founded with a vision to revolutionize how businesses operate and grow in the modern economy. We believe that by combining physical workspaces with powerful digital tools, we can help entrepreneurs and companies achieve their full potential.</p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Our Mission</h3>
+                        <p class="text-gray-600">To provide comprehensive, flexible solutions that remove barriers to business success, allowing our members to focus on what truly matters - innovation and growth.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Our Values</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-sylen-orange mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Innovation: We constantly evolve to meet changing business needs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sylen-orange mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Community: We foster collaboration and networking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sylen-orange mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Flexibility: We adapt to our members' unique requirements</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sylen-orange mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
+                                <span class="text-gray-600">Sustainability: We operate responsibly for long-term impact</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our <span class="text-sylen-green">Members</span> Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from entrepreneurs and businesses who have grown with SYLEN</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The SYLEN coworking space gave my startup the professional environment we needed to attract our first clients. The networking events were invaluable for making connections."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                            <p class="text-gray-600 text-sm">Founder, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The business center services saved us months of paperwork and legal hurdles. Having a prestigious address and reception services gave our small team credibility."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael T.</h4>
+                            <p class="text-gray-600 text-sm">CEO, GreenSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The SYLEN Platform has become our business operating system. From HR to financial tracking, having everything in one place has streamlined our operations dramatically."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Priya K.</h4>
+                            <p class="text-gray-600 text-sm">COO, GlobalConnect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In <span class="text-sylen-orange">Touch</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to join SYLEN or have questions? Our team is here to help you get started.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sylen-orange focus:border-transparent" placeholder="Your Name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sylen-orange focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sylen-orange focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="coworking">Coworking Center</option>
+                                <option value="business">Business Center</option>
+                                <option value="platform">SYLEN Platform</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sylen-orange focus:border-transparent" placeholder="Tell us about your needs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-sylen-green text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-gray-100 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-sylen-orange text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Our Location</h4>
+                                    <p class="text-gray-600">123 Business Avenue, Downtown<br>Cityville, ST 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-sylen-green text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Phone</h4>
+                                    <p class="text-gray-600">+1 (555) 123-4567<br>Mon-Fri, 9am-6pm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-sylen-orange text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">hello@sylen.com<br>support@sylen.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 rounded-full bg-sylen-orange text-white flex items-center justify-center hover:bg-opacity-80 transition">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-sylen-green text-white flex items-center justify-center hover:bg-opacity-80 transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-sylen-orange text-white flex items-center justify-center hover:bg-opacity-80 transition">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-sylen-green text-white flex items-center justify-center hover:bg-opacity-80 transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018364!2d-73.9878449246864!3d40.74844097138968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689878907657!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-sylen-green text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Stay Updated with SYLEN</h2>
+            <p class="max-w-2xl mx-auto mb-8 opacity-90">Subscribe to our newsletter for the latest updates, events, and business tips.</p>
+            
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-md focus:outline-none text-gray-800">
+                <button class="bg-sylen-orange px-6 py-3 rounded-r-md hover:bg-opacity-90 transition">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-sylen-orange mb-4">SYLEN</div>
+                    <p class="text-gray-400">Empowering businesses with innovative workspaces and powerful digital tools for sustainable growth.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Coworking Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Business Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">SYLEN Platform</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Events & Networking</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 SYLEN. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
